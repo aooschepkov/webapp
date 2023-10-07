@@ -1,0 +1,43 @@
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.maxwidth610 {
+  width: auto;
+  max-width: 610px;
+  margin: auto;
+}
+
+.maxwidth500 {
+  width: auto;
+  max-width: 500px;
+  margin: auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+/* html { font-size: calc(1em + 1vw); } */
+
+.body {
+  background: #ffe7a0
+}
+
+.mx-xs-navbar-toggle {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 400px) {
+  .mx-xs-navbar-toggle {
+    width: 100%;
+  }
+
+}
+
+.dropdown-menu { background-color: #f2c02c; }
