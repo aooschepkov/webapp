@@ -82,3 +82,21 @@
 .dropdown.btn:active {
   color: #f2c02c;
 }
+
+.list-group-item {
+  background-color: #212529;
+  color: white;
+}
+
+.mx-xs-auto {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 400px) {
+  .mx-xs-auto {
+    width: 100%;
+  }
+}
