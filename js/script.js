@@ -1,33 +1,32 @@
-var weekdays = [
-  "Понедельник",
-  "Вторник",
-  "Среда",
-  "Четверг",
-  "Пятница",
-  "Суббота",
-  "Воскресенье",
+var labels = [
+  "25 Sep",
+  "29 Sep",
+  "2 Oct",
+  "7 Oct",
+  "10 Oct",
+  "15 Oct",
+  "22 Oct",
 ];
 
 var config = {
   type: "line",
   data: {
-    labels: weekdays,
+    labels: labels,
     datasets: [
       {
-        label: "Week of Training",
-        data: [65, 59, 80, 81, 56, 55, 40],
+        label: "Deadlift PR",
+        data: [100, 100, 110, 110, 110, 120, 120],
         fill: false,
-        label: "Label 1",
         borderColor: "#f2c02c",
         tension: 0.1,
       },
     ],
     options: {
-      legend: { 
+      legend: {
         display: true,
         position: "bottom",
         labels: {
-          color: "#FFFFFF",
+          // color: "#000000",
         },
       },
     },

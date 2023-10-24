@@ -24,21 +24,40 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="./home.html" class="nav-item nav-link">Home</a>
-                        <a href="./workoutplan.html" class="nav-item nav-link">Workout Plan</a>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle nav-item nav-link text-center" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Workout
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li>
+                                    <a class="dropdown-item" href="./workoutcalendar.html">Workout Calendar</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./logworkout.html">Log Workout</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        Create Workout &raquo;
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Workout Library</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Workout Generator</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Create</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                         <a href="./exerciselibrary.html" class="nav-item nav-link">Exercise Library</a>
                         <a href="#" class="nav-item nav-link">Meal Plan</a>
                         <a href="./foodsearch.html" class="nav-item nav-link">Food Search</a>
-                        <div class="dropdown">
-                            <div class="btn dropdown-toggle nav-item nav-link text-center active" role="button"
-                                id="dropdownMenu" data-bs-toggle="dropdown" aria-haspopup="true">
-                                Reports/Charts
-                            </div>
-                            <div class="dropdown-menu text-center text-md-start" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item active" href="./trainingreport.html">Training</a>
-                                <a class="dropdown-item" href="./nutritionreport.html">Nutrition</a>
-                                <a class="dropdown-item" href="#">Combined</a>
-                            </div>
-                        </div>
+                        <a href="./reports.html" class="nav-item nav-link active">Charts/Reports</a>
                     </div>
                 </div>
             </div>
