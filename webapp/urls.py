@@ -16,7 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from gymassistant import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', views.home, name='home'),
+    path('workoutcalendar/', views.workoutcalendar, name='workoutcalendar'),
+    path('logworkout/', views.logworkout, name='logworkout'),
+    path('workoutlibrary/', views.workoutlibrary, name='workoutlibrary'),
+    path('generateworkout/', views.generateworkout, name='generateworkout'),
+    path('createworkout/', views.createworkout, name='createworkout'),
+    path('exerciselibrary/', views.exerciselibrary, name='exerciselibrary'),
+    path('nutrition/', views.nutrition, name='nutrition'),
+    path('foodsearch/', views.foodsearch, name='foodsearch'),
+    path('reports/', views.reports, name='reports'),
+    
+    
 ]
