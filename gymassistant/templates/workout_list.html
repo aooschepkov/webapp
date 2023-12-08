@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Workout List{% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+    <h2 style="color: white;">Журнал тренировок</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Exercise</th>
+                <th>Sets</th>
+                <th>Repetitions</th>
+                <th>Weight</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for workout in workouts %}
+            <tr>
+                <td>{{ workout.start_time }}</td>
+                <td>{{ workout.end_time }}</td>
+                <td>{{ workout.exercise_name }}</td>
+                <td>{{ workout.sets }}</td>
+                <td>{{ workout.repetitions }}</td>
+                <td>{{ workout.weight }}</td>
+                <td>
+                    <a href="{% url 'workout_update' workout.pk %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'workout_delete' workout.pk %}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'workout_log' %}" class="btn btn-success">Add Workout</a>
+</div>
+{% endblock %}

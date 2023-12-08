@@ -22,7 +22,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.home, name='home'),
     path('workoutcalendar/', views.workoutcalendar, name='workoutcalendar'),
-    path('logworkout/', views.logworkout, name='logworkout'),
+    path('workout_log/', views.workout_log, name='workout_log'),
+    path('workout_list/', views.workout_list, name='workout_list'),
+    path('workout_update/<int:pk>/', views.workout_update, name='workout_update'),
+    path('workout_delete/<int:pk>/', views.workout_delete, name='workout_delete'),
     path('workoutlibrary/', views.workoutlibrary, name='workoutlibrary'),
     path('generateworkout/', views.generateworkout, name='generateworkout'),
     path('createworkout/', views.createworkout, name='createworkout'),
@@ -30,6 +33,4 @@ urlpatterns = [
     path('nutrition/', views.nutrition, name='nutrition'),
     path('foodsearch/', views.foodsearch, name='foodsearch'),
     path('reports/', views.reports, name='reports'),
-    
-    
 ]
