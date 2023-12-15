@@ -31,6 +31,11 @@ urlpatterns = [
     path('createworkout/', views.createworkout, name='createworkout'),
     path('exerciselibrary/', views.exerciselibrary, name='exerciselibrary'),
     path('nutrition/', views.nutrition, name='nutrition'),
+    # path('nutrition/<str:date>/', views.nutrition_by_date, name='nutrition_by_date'),
     path('foodsearch/', views.foodsearch, name='foodsearch'),
     path('reports/', views.reports, name='reports'),
+    path('food_list/', views.food_list, name='food_list'),
+    path('food_detail/<int:id>/', views.food_detail, name='food_detail'),
+    path('edit_food_item/<int:id>/', views.edit_food_item, name='edit_food_item'),
+    path('delete_food_item/<int:id>/', views.delete_food_item, name='delete_food_item'),
 ]

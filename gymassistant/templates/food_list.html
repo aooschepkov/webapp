@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Food List{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="card bg-dark text-white">
+        {% for item in food_items %}
+        <p>{{ item.date }}: {{ item.product_name }} - {{ item.calories }} calories, {{ item.protein }}g protein, {{
+            item.fats }}g fat, {{ item.carbs }}g carbs</p>
+        {% endfor %}
+
+
+        {% for item in food_items %}
+        <a href="{% url 'food_detail' id=item.id %}">{{ item.product_name }}</a>
+        {% endfor %}
+    </div>
+
+    {% for item in food_items %}
+    <p>{{ item.name }}: {{ item.calories }} calories, {{ item.protein }}g protein, {{ item.fats }}g fat, {{ item.carbs
+        }}g carbs</p>
+    <a href="{% url 'edit_food_item' id=item.id %}" class="btn btn-primary">Update</a>
+    <a href="{% url 'delete_food_item' id=item.id %}" class="btn btn-danger">Delete</a>
+    {% endfor %}
+</div>
+{% endblock %}

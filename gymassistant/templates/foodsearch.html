@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Food Search{% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+    <form method="get" class="input-group justify-content-center my-2 my-lg-0">
+        <input type="text" name="food_item" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="submit" class="btn btn-primary">search</button>
+    </form>
+    
+
+
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">{{ nutrition_facts.foods.0.brandName }}</h5>
+            <h6 class="card-subtitle mb-2 text-white">{{ nutrition_facts.foods.0.description }}</h6>
+            <ul class="list-group list-group-flush">
+                {% for nutrient in nutrition_facts.foods.0.foodNutrients %}
+                {% if nutrient.nutrientName == "Protein" or nutrient.nutrientName == "Total lipid (fat)" or nutrient.nutrientName == "Carbohydrate, by difference" or nutrient.nutrientName == "Energy" %}
+                <li class="list-group-item">{{ nutrient.nutrientName }}: {{ nutrient.value }} {{ nutrient.unitName }}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="food_item" value="{{ food_item }}">
+        <button type="submit">Add to list</button>
+    </form>
+</div>
+
+
+{% endblock %}

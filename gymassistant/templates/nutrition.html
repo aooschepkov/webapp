@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Nutrition{% endblock %}
+
+{% block content %}
+<form method="post" class="form-inline justify-content-center my-2 my-lg-0">
+    {% csrf_token %}
+    <input type="text" name="product_name" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Product Name" required>
+    <input type="number" name="calories" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Calories" required>
+    <input type="number" name="portion_size" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Portion Size" required>
+    <input type="number" name="protein" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Protein" required>
+    <input type="number" name="fats" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Fats" required>
+    <input type="number" name="carbs" class="form-control mr-sm-2 flex-grow-1 rounded" placeholder="Carbs" required>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>
+
+
+{% endblock %}

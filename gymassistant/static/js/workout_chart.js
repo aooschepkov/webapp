@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const chartData = JSON.parse(document.getElementById('chart-data').textContent);
 
-  const ctx = document.getElementById('workoutChart').getContext('2d');
-  const workoutChart = new Chart(ctx, {
+//   const ctx = document.getElementById('workoutChart').getContext('2d');
+  const workoutChart = new Chart("workoutChart", {
       type: 'bar',
       data: {
           labels: chartData.map(data => data.exercise_name),
